@@ -4,7 +4,7 @@
         let body;
         let url = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
           /*eslint new-cap: [2, {"newIsCapExceptions": ["Buffer.from"]}]*/
-        let auth = new Buffer.from("aOgXdX4pVtDnQKVwzzdHQQJiFrkay2uH:sYzRpAUNopC2g80x").toString('base64');
+          let auth = new Buffer.from(process.env.MPESA_CONSUMER_KEY).toString('base64');
        axios.get(url,{
 
             headers: {
